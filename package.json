@@ -1,0 +1,14 @@
+{
+  "name": "phantom-pulse",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
+  },
+  "devDependencies": {
+    "content-wind": "latest",
+    "nuxt": "^3.10.3"
+  }
+}
