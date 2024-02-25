@@ -1,15 +1,15 @@
 site_url: http://localhost:3000
-# site_url: https://github.com/r4nd3l/Nuxt3
-logo_url: https://raw.githubusercontent.com/r4nd3l/Nuxt3/feature/netlify/public/img/myLogo.png
+# site_url: https://github.com/r4nd3l/Nuxt3Content_01
+logo_url: https://raw.githubusercontent.com/r4nd3l/Nuxt3Content_01/feature/netlify/public/img/myLogo.png
 
 # The search functionally requires loading all collection(s) entries,
 search: true
 
 publish_mode: editorial_workflow
 backend:
-  name: github
-  # name: test-repo # in development mode(!)
-  repo: themattmiller88/Nuxt3Netlify
+  # name: github
+  name: test-repo # in development mode(!)
+  repo: r4nd3l/Nuxt3Content_01
   branch: feature/netlify
   squash_merges: true
 
@@ -33,9 +33,20 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Created Date", name: "createdAt", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "string", required: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Button", name: "button", widget: "string", required: true }
 
@@ -51,9 +62,20 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Created Date", name: "createdAt", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "string", required: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # page - About
@@ -72,11 +94,26 @@ collections:
           name: "category",
           widget: "select",
           default: "animals",
-          options: [{ label: "Animals", value: "animals" }, { label: "Food", value: "food" }],
+          options:
+            [
+              { label: "Animals", value: "animals" },
+              { label: "Food", value: "food" },
+            ],
         }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Cover Image", name: "cover", widget: "image", required: false, allow_multiple: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Cover Image",
+          name: "cover",
+          widget: "image",
+          required: false,
+          allow_multiple: false,
+        }
       - { label: "Content", name: "body", widget: "markdown", required: false }
       - {
           label: "Gallery",
@@ -98,9 +135,20 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Created Date", name: "createdAt", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "string", required: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Button", name: "button", widget: "string", required: true }
 
@@ -115,6 +163,12 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Created Date", name: "createdAt", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Body", name: "body", widget: "markdown", required: false }
