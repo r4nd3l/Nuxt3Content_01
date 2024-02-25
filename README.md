@@ -1,21 +1,25 @@
-# My Website
+To genarate (for static hosting) - test
 
-My website made by [Content Wind](https://content-wind.nuxt.space) theme.
-
-## Setup
-
-```bash
-npm install
+```
+ $ npx nuxi generate
 ```
 
-## Development
+Instant server with python (.output/public)
 
-```bash
-npm run dev
+```
+$ python3 -m http.server 8080
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) to see your app.
+---
 
-## Deployment
+To build (dynamic server)
 
-Learn more how to deploy on [Nuxt docs](https://nuxt.com/docs/getting-started/deployment).
+```
+$ npx nuxi build
+```
+
+To preview the build
+
+```
+$ node .output/server/index.mjs
+```
