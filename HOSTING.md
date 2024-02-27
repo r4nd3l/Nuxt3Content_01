@@ -11,3 +11,15 @@ target: static
 - **npx nuxi dev** - Launch the development server.
 - **npx nuxi generate** - Build the application (if needed), generate every route as a HTML file and statically export to dist/ directory (used for static hosting).
 - **npx nuxi start** - serve the dist/ directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
+
+Deploy to Netlify! - Before commit
+
+- check the `./public/admin/index.html` about host or dev
+- delete the `./dist` and `./.output` directories
+
+# In order
+
+- rename config.yml
+  - sire_url
+  - logo_url
+  - repo

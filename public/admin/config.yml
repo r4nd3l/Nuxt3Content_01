@@ -10,7 +10,7 @@ backend:
   # name: github
   name: test-repo # in development mode(!)
   repo: r4nd3l/Nuxt3Content_01
-  branch: feature/netlify
+  branch: main
   squash_merges: true
 
 # used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
@@ -21,12 +21,11 @@ public_folder: "/public/img"
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  # page - Main
   - name: "main"
     # preview_path: "blog/{{year}}/{{month}}/{{slug}}"
-    label: "Main"
+    label: "Kezdőlap"
     description: The main collection
-    label_singular: "Main"
+    label_singular: "Kezdőlap"
     folder: "/content/01.main"
     create: true
     format: "frontmatter"
@@ -50,11 +49,10 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Button", name: "button", widget: "string", required: true }
 
-  # page - Home
-  - name: "home"
-    label: "Home"
+  - name: "main"
+    label: "Elérhetőség"
     description: The home collection
-    label_singular: "Home"
+    label_singular: "Elérhetőség"
     folder: "/content/02.home"
     create: true
     format: "frontmatter"
@@ -77,80 +75,6 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
-  # page - About
-  - name: "about"
-    label: "About"
-    description: The about collection
-    label_singular: "About"
-    folder: "/content/03.about"
-    create: true
-    format: "frontmatter"
-    slug: "{{slug}}"
-    preview_path: "projects/{{slug}}"
-    fields:
-      - {
-          label: "Project Category",
-          name: "category",
-          widget: "select",
-          default: "animals",
-          options:
-            [
-              { label: "Animals", value: "animals" },
-              { label: "Food", value: "food" },
-            ],
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Cover Image",
-          name: "cover",
-          widget: "image",
-          required: false,
-          allow_multiple: false,
-        }
-      - { label: "Content", name: "body", widget: "markdown", required: false }
-      - {
-          label: "Gallery",
-          name: "gallery",
-          widget: "list",
-          required: false,
-          summary: "{{fields.image}}",
-          field: { label: "Image", name: "image", widget: "image" },
-        }
-
-  # page - Single
-  - name: "single"
-    label: "Single"
-    description: The single collection
-    label_singular: "Single"
-    folder: "/content/04.single"
-    create: true
-    format: "frontmatter"
-    editor:
-      preview: true
-    fields:
-      - {
-          label: "Created Date",
-          name: "createdAt",
-          widget: "datetime",
-          date_format: "YYYY-MM-DD",
-          time_format: false,
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "string",
-          required: false,
-        }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
-      - { label: "Button", name: "button", widget: "string", required: true }
 
   # page - Footer
   - name: "footer"

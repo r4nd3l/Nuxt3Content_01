@@ -31,5 +31,6 @@ export default defineNuxtConfig({
       // in case of to share into the public
     },
   },
+  // buildDir: "dist",
   ssr: true,
 });
